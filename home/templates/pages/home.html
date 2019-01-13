@@ -1,0 +1,25 @@
+{% extends "pages/base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block category %}
+
+	{% for category in Category %}
+		<a class="nav-link" href="{{category.id}}/">{{category.category_text}}</a>		
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: #EEEEEE; border-radius: 5px">
+	<h1>Xin Chào</h1>
+	<div><h2>Tên tôi là NVĐ<br>Tôi đến từ Việt Nam. Và đây là blog của tôi.</h2></div>
+	<div style="font-size: 1.4em">
+		Mercedes-Benz Malaysia had another record month for passenger cars in May, registering 1,143 units, which was an improvement of more than 100% from the 544 sold during the same period last year.
+	The luxury marque passenger car sales were spearheaded namely by the C-, E- and S-Class models which recorded 888 units last month, it said in a statement in Kuala Lumpur today.
+	Main contributors to this figure were the strong sales of the E300 Blue TEC Hybrid launched in January 2015, the C200 and S400L Hybrid.
+	The compact car family, comprising the new A-, and B-Class, CLA and GLA models, posted total May sales of 254 units with sales led by the continued success of the A-Class.
+	Currently, the compact cars are touring the country as part of the Mercedes-Benz Malaysia Urban Hunting Campaign.
+	Mercedes-Benz Malaysia record sales in May was preceded by positive sales from January to April 2015. During the first quarter, Mercedes-Benz Malaysia delivered a total of 1,886 units, followed by 932 in April.
+	Mercedes-Benz Malaysia is on the road to success. We have had an exceptional start to 2015 and the sales figures recorded are a direct result of our dynamic market strategy, said president and chief executive officer Roland S Folger.
+	</div>
+</div>
+{% endblock %}

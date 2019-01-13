@@ -1,0 +1,23 @@
+{% extends "pages/base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block category %}
+	{% for category in Category %}
+		<a class="nav-link" href="{{category.id}}/">{{category.category_text}}</a>
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: #EEEEEE; border-radius: 5px">
+	<div style="font-size: 1.4em">
+		<br>
+		Văn quán-hà đông
+		<br>
+		Yên Xá-Tân Triều
+		<br>
+		TP.HCM
+		<br>
+		Quảng Ngãi
+	</div>
+</div>
+{% endblock %}

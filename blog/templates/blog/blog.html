@@ -1,0 +1,24 @@
+{% extends "pages/base.html" %}
+{% block title %}Blog{% endblock %}
+
+{% block category %}
+	{% for category in category.Category %}
+		<a class="nav-link" href="/{{category.id}}">{{category.category_text}}</a>
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: #EEEEEE; border-radius: 5px">
+
+<div style="font-size: 1.4em">
+	{% for post in data.Posts %}
+	<h4>
+		{{post.date|date:"d-m-Y"}},<a href="{% url 'post' post.id %}">{{post.title}}</a>
+		<br>
+
+	</h4>
+	{% endfor %}
+	
+</div>
+</div>
+{% endblock %}

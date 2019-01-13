@@ -1,0 +1,21 @@
+{% extends "pages/base.html" %}
+{% block title %}{{ category.category_text }}{% endblock %}
+
+{% block category %}
+	{% for category_all in category_all %}
+		<a class="nav-link" href="/{{category_all.id}}/">{{category_all.category_text}}</a>
+	{% endfor %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid" style="background-color: #EEEEEE; border-radius: 5px">
+	<div style="font-size: 1.4em">
+		<h1>{{ category.category_text }}</h1>
+		<ul>
+		    {% for post in category.post_set.all %}
+		        <li><a href="{% url 'post' post.id %}">{{ post.title }}</a></li>
+		    {% endfor %}
+		</ul>
+	</div>
+</div>
+{% endblock %}
